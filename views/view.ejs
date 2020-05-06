@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <style>
+        table {
+            text-align: center;
+            margin: 1em auto;
+            width: 100%;
+            font-size: small;
+        }
+
+        thead>tr>td {
+            font-weight: bold;
+        }
+
+        td {
+            background-color: #D8D8D8;
+            padding: 0.5em;
+            max-width: 4em;
+            min-width: 4em;
+            overflow: hidden;
+        }
+
+        tr :nth-child(2),
+        tr :nth-child(5) {
+            max-width: 7em;
+            min-width: 7em;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>Station id</td>
+                <td>Station name</td>
+                <td>Station longittude</td>
+                <td>Station lattitude</td>
+                <td>Data timestamp</td>
+                <td>PM10</td>
+                <td>PM2.5</td>
+                <td>Temperature</td>
+                <td>Pressure</td>
+                <td>Humidity</td>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(function(station) { %>
+            <tr>
+                <td><%= station.stationId %></td>
+                <td><%= station.name %></td>
+                <td><%= station.lon %></td>
+                <td><%= station.lat %></td>
+                <td><%= new Date(station.parsedSensorsData.ts).toLocaleString('pl-PL') %></td>
+                <td><%= parseFloat(station.parsedSensorsData.values['PM10']).toFixed(2); %></td>
+                <td><%= parseFloat(station.parsedSensorsData.values['PM2.5']).toFixed(2); %></td>
+                <td><%= parseFloat(station.parsedSensorsData.values['temperature']).toFixed(2);%></td>
+                <td><%= parseFloat(station.parsedSensorsData.values['pressure']).toFixed(2); %></td>
+                <td><%= parseFloat(station.parsedSensorsData.values['humidity']).toFixed(2); %></td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+
+</html>

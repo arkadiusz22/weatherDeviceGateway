@@ -1,0 +1,20 @@
+{
+  "name": "device-gateway",
+  "version": "1.0.0",
+  "description": "package which gets, parses, displays and redirects sensors data",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r esm index.js"
+  },
+  "author": "azawadzki",
+  "repository": {
+    "type": "git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "ejs": "^3.1.2",
+    "esm": "^3.2.25",
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "stationId": 7,
+    "name": "Katowice, ul. Wojciecha 23A",
+    "lon": 19.061783,
+    "lat": 50.221443
+  },
+  {
+    "stationId": 12,
+    "name": "Katowice, ul. Szopienicka 66",
+    "lon": 19.084644,
+    "lat": 50.252377
+  },
+  {
+    "stationId": 13,
+    "name": "Katowice, ul. Alfreda 1",
+    "lon": 19.01375,
+    "lat": 50.287006
+  },
+  {
+    "stationId": 14,
+    "name": "Katowice, ul. PCK 1",
+    "lon": 19.015036,
+    "lat": 50.25252
+  },
+  {
+    "stationId": 27,
+    "name": "Katowice, ul. Jankego 65",
+    "lon": 18.990131,
+    "lat": 50.214043
+  }
+]
