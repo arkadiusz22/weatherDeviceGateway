@@ -28,5 +28,23 @@
     "name": "Katowice, ul. Jankego 65",
     "lon": 18.990131,
     "lat": 50.214043
+  },
+  {
+    "stationId": 28,
+    "name": "Katowice, ul. Hetmańska 8",
+    "lon": 18.977175,
+    "lat": 50.233486
+  },
+  {
+    "stationId": 29,
+    "name": "Katowice, ul. Barbary 25",
+    "lon": 19.007534,
+    "lat": 50.248585
+  },
+  {
+    "stationId": 30,
+    "name": "Katowice, ul. Głowackiego 6",
+    "lon": 19.009983,
+    "lat": 50.251793
   }
 ]
