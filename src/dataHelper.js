@@ -1,5 +1,6 @@
 import axios from 'axios';
 import stationsJson from './stations.json';
+import moment from 'moment-timezone';
 
 class DataHelper {
     async getAllSensorsData() {
@@ -40,7 +41,7 @@ class DataHelper {
         const convertedData = JSON.parse(JSON.stringify(filteredData));
         convertedData.forEach(station => {
             station.parsedSensorsData = {
-                ts: new Date(station.sensorsData[0].param_timestamp).toLocaleString('pl-PL'),
+                ts: moment.tz(station.sensorsData[0].param_timestamp, "Europe/Warsaw"),
                 values: {},
             };
             station.sensorsData.forEach(sensor => {
