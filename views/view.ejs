@@ -55,7 +55,7 @@
                 <td><%= station.name %></td>
                 <td><%= station.lon %></td>
                 <td><%= station.lat %></td>
-                <td><%= new Date(station.parsedSensorsData.ts).toLocaleString('pl-PL') %></td>
+                <td><%= station.parsedSensorsData.ts %></td>
                 <td><%= parseFloat(station.parsedSensorsData.values['PM10']).toFixed(2); %></td>
                 <td><%= parseFloat(station.parsedSensorsData.values['PM2.5']).toFixed(2); %></td>
                 <td><%= parseFloat(station.parsedSensorsData.values['temperature']).toFixed(2);%></td>
