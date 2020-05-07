@@ -40,7 +40,7 @@ class DataHelper {
         const convertedData = JSON.parse(JSON.stringify(filteredData));
         convertedData.forEach(station => {
             station.parsedSensorsData = {
-                ts: Date.parse(station.sensorsData[0].param_timestamp),
+                ts: new Date(station.sensorsData[0].param_timestamp),
                 values: {},
             };
             station.sensorsData.forEach(sensor => {
