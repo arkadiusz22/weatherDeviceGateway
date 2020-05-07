@@ -38,8 +38,8 @@
             <tr>
                 <td>Station id</td>
                 <td>Station name</td>
-                <td>Station longittude</td>
                 <td>Station lattitude</td>
+                <td>Station longittude</td>
                 <td>Data timestamp</td>
                 <td>PM10</td>
                 <td>PM2.5</td>
@@ -53,8 +53,8 @@
             <tr>
                 <td><%= station.stationId %></td>
                 <td><%= station.name %></td>
-                <td><%= station.lon %></td>
                 <td><%= station.lat %></td>
+                <td><%= station.lon %></td>
                 <td><%= station.parsedSensorsData.ts %></td>
                 <td><%= parseFloat(station.parsedSensorsData.values['PM10']).toFixed(2); %></td>
                 <td><%= parseFloat(station.parsedSensorsData.values['PM2.5']).toFixed(2); %></td>

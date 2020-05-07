@@ -2,49 +2,49 @@
   {
     "stationId": 7,
     "name": "Katowice, ul. Wojciecha 23A",
-    "lon": 19.061783,
-    "lat": 50.221443
+    "lat": 50.221443,
+    "lon": 19.061783
   },
   {
     "stationId": 12,
     "name": "Katowice, ul. Szopienicka 66",
-    "lon": 19.084644,
-    "lat": 50.252377
+    "lat": 50.252377,
+    "lon": 19.084644
   },
   {
     "stationId": 13,
     "name": "Katowice, ul. Alfreda 1",
-    "lon": 19.01375,
-    "lat": 50.287006
+    "lat": 50.287006,
+    "lon": 19.013750
   },
   {
     "stationId": 14,
     "name": "Katowice, ul. PCK 1",
-    "lon": 19.015036,
-    "lat": 50.25252
+    "lat": 50.252520,
+    "lon": 19.015036
   },
   {
     "stationId": 27,
     "name": "Katowice, ul. Jankego 65",
-    "lon": 18.990131,
-    "lat": 50.214043
+    "lat": 50.214043,
+    "lon": 18.990131
   },
   {
     "stationId": 28,
     "name": "Katowice, ul. Hetmańska 8",
-    "lon": 18.977175,
-    "lat": 50.233486
+    "lat": 50.233486,
+    "lon": 18.977175
   },
   {
     "stationId": 29,
     "name": "Katowice, ul. Barbary 25",
-    "lon": 19.007534,
-    "lat": 50.248585
+    "lat": 50.248585,
+    "lon": 19.007534
   },
   {
     "stationId": 30,
     "name": "Katowice, ul. Głowackiego 6",
-    "lon": 19.009983,
-    "lat": 50.251793
+    "lat": 50.251793,
+    "lon": 19.009983
   }
 ]
