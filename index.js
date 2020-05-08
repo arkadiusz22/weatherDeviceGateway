@@ -21,4 +21,5 @@ const delay = 20 * 60 * 1000;
     }
     ThingsboardHelper.sendDataToThingsboard(data);
     setTimeout(fetchData, delay);
+    
 })();
