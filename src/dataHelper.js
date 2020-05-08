@@ -41,7 +41,7 @@ class DataHelper {
         const convertedData = JSON.parse(JSON.stringify(filteredData));
         convertedData.forEach(station => {
             station.parsedSensorsData = {
-                ts: moment.tz(station.sensorsData[0].param_timestamp, "Europe/Warsaw"),
+                ts: station.sensorsData[0].param_timestamp,
                 values: {},
             };
             station.sensorsData.forEach(sensor => {
@@ -58,11 +58,20 @@ class DataHelper {
                     default:
                         break;
                 };
-                station.parsedSensorsData.values[sensor.param_name] = sensor.param_value;
+                station.parsedSensorsData.values[sensor.param_name] = Math.round(sensor.param_value * 1000) / 1000;
             });
             delete station.sensorsData;
         });
         return convertedData;
+    }
+
+    convertTimeForFrontend(data) {
+        const dataForFrontend = JSON.parse(JSON.stringify(data));
+        dataForFrontend.forEach(station => {
+            const oldVal = station.parsedSensorsData.ts;
+            station.parsedSensorsData.ts = moment.tz(oldVal, "Europe/Warsaw")
+        });
+        return dataForFrontend;
     }
 
     async getData() {
