@@ -41,7 +41,7 @@ class DataHelper {
         const convertedData = JSON.parse(JSON.stringify(filteredData));
         convertedData.forEach(station => {
             station.parsedSensorsData = {
-                ts: station.sensorsData[0].param_timestamp,
+                ts:  moment.tz(station.sensorsData[0].param_timestamp, "Europe/Warsaw"),
                 values: {},
             };
             station.sensorsData.forEach(sensor => {
@@ -63,15 +63,6 @@ class DataHelper {
             delete station.sensorsData;
         });
         return convertedData;
-    }
-
-    convertTimeForFrontend(data) {
-        const dataForFrontend = JSON.parse(JSON.stringify(data));
-        dataForFrontend.forEach(station => {
-            const oldVal = station.parsedSensorsData.ts;
-            station.parsedSensorsData.ts = moment.tz(oldVal, "Europe/Warsaw")
-        });
-        return dataForFrontend;
     }
 
     async getData() {

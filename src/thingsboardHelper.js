@@ -1,5 +1,6 @@
 import axios from 'axios';
 import tokens from './tokens.json';
+import moment from 'moment-timezone';
 
 class ThingsboardHelper {
     getDeviceToken(stationId) {
@@ -16,10 +17,14 @@ class ThingsboardHelper {
     registerDevice(deviceData) {
         const { stationId, name, lat: lattitude, lon: longitude } = deviceData;
         const token = this.getDeviceToken(stationId);
-        const url = `https://host:port/api/v1/${token}/attributes`;
+        const url = `https://thingsboard.makowski.edu.pl/api/v1/${token}/attributes`;
         const body = { name, lattitude, longitude, };
-        const headers = { 'Content-Type': 'application/json', };
-        axios.post(url, body, headers)
+        const config = {
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        };
+        axios.post(url, body, config)
             .then(function (response) {
                 console.log(`registerDevice for stationId ${stationId}.`)
             })
@@ -37,9 +42,17 @@ class ThingsboardHelper {
     sendDeviceData(deviceData) {
         const { stationId, parsedSensorsData } = deviceData;
         const token = this.getDeviceToken(stationId);
-        const url = `https://host:port/api/v1/${token}/telemetry`;
-        const headers = { 'Content-Type': 'application/json', };
-        axios.post(url, parsedSensorsData, headers)
+        const url = `https://thingsboard.makowski.edu.pl/api/v1/${token}/telemetry`;
+        const body = {
+            ts: moment.tz(parsedSensorsData.ts, "Europe/Warsaw").format('x'),
+            values: parsedSensorsData.values
+        }
+        const config = {
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        };
+        axios.post(url, body, config)
             .then(function (response) {
                 console.log(`sendDeviceData for stationId ${stationId}.`)
             })

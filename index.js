@@ -8,7 +8,7 @@ let initialFetch = true;
 
 const app = express();
 app.set('view engine', 'ejs');
-app.get('/', (req, res) => res.render('view.ejs', { data: DataHelper.convertTimeForFrontend(data) }));
+app.get('/', (req, res) => res.render('view.ejs', { data }));
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
 
@@ -21,5 +21,4 @@ const delay = 20 * 60 * 1000;
     }
     ThingsboardHelper.sendDataToThingsboard(data);
     setTimeout(fetchData, delay);
-    
 })();
