@@ -4,11 +4,12 @@ import express from 'express';
 
 const PORT = process.env.PORT || 5000
 let data = [];
+let dataForFront = [];
 let initialFetch = true;
 
 const app = express();
 app.set('view engine', 'ejs');
-app.get('/', (req, res) => res.render('view.ejs', { data: DataHelper.convertTimeForFrontend(data) }));
+app.get('/', (req, res) => res.render('view.ejs', { data: dataForFront }));
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
 
@@ -19,6 +20,7 @@ const delay = 20 * 60 * 1000;
         ThingsboardHelper.registerAllDevices(data);
         initialFetch = false;
     }
+    dataForFront = DataHelper.convertTimeForFrontend(data);
     ThingsboardHelper.sendDataToThingsboard(data);
     setTimeout(fetchData, delay);
 })();
