@@ -15,10 +15,10 @@ class ThingsboardHelper {
     }
 
     registerDevice(deviceData) {
-        const { stationId, name, lat: lattitude, lon: longitude } = deviceData;
+        const { stationId, name, lat: latitude, lon: longitude } = deviceData;
         const token = this.getDeviceToken(stationId);
         const url = `https://thingsboard.makowski.edu.pl/api/v1/${token}/attributes`;
-        const body = { name, lattitude, longitude, };
+        const body = { name, latitude, longitude, };
         const config = {
             headers: {
                 'Content-Type': 'application/json',
