@@ -1,50 +1,32 @@
 [
-  {
-    "stationId": 7,
-    "name": "Katowice, ul. Wojciecha 23A",
-    "lat": 50.221443,
-    "lon": 19.061783
-  },
-  {
-    "stationId": 12,
-    "name": "Katowice, ul. Szopienicka 66",
-    "lat": 50.252377,
-    "lon": 19.084644
-  },
-  {
-    "stationId": 13,
-    "name": "Katowice, ul. Alfreda 1",
-    "lat": 50.287006,
-    "lon": 19.013750
-  },
-  {
-    "stationId": 14,
-    "name": "Katowice, ul. PCK 1",
-    "lat": 50.252520,
-    "lon": 19.015036
-  },
-  {
-    "stationId": 27,
-    "name": "Katowice, ul. Jankego 65",
-    "lat": 50.214043,
-    "lon": 18.990131
-  },
-  {
-    "stationId": 28,
-    "name": "Katowice, ul. Hetmańska 8",
-    "lat": 50.233486,
-    "lon": 18.977175
-  },
-  {
-    "stationId": 29,
-    "name": "Katowice, ul. Barbary 25",
-    "lat": 50.248585,
-    "lon": 19.007534
-  },
-  {
-    "stationId": 30,
-    "name": "Katowice, ul. Głowackiego 6",
-    "lat": 50.251793,
-    "lon": 19.009983
-  }
+    {
+        "stationId": 112,
+        "name": "Katowice, ul. Wróblewskiego 42",
+        "lat": 50.26799,
+        "lon": 19.04202
+    },
+    {
+        "stationId": 130,
+        "name": "Katowice, ul. Szeptyckiego 1",
+        "lat": 50.25003,
+        "lon": 19.036142
+    },
+    {
+        "stationId": 935,
+        "name": "Katowice, ul. Mikołowska 131",
+        "lat": 50.24467,
+        "lon": 18.995974
+    },
+    {
+        "stationId": 936,
+        "name": "Katowice, ul. 3 Maja 42",
+        "lat": 50.259605,
+        "lon": 19.01516
+    },
+    {
+        "stationId": 944,
+        "name": "Katowice, ul.Ligonia 43",
+        "lat": 50.2527,
+        "lon": 19.025331
+    }
 ]
